@@ -1,0 +1,9 @@
+services:
+  ectopress:
+    build:
+      context: ./
+    container_name: ectopress
+    volumes:
+      - ~/Downloads/raw:/usr/src/app/upload
+      - ~/Downloads/converted:/usr/src/app/converted
+    restart: unless-stopped
